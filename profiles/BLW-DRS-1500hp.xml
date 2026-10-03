@@ -1,0 +1,30 @@
+<LocoProfile>
+  <Version>1</Version>
+  <LiveryId>BLW DRS 1500hp</LiveryId>
+  <Enabled>true</Enabled>
+  <Exhausts>
+    <LocoExhaust>
+      <Kind>Replacement</Kind>
+      <Path>[particles]/ExhaustEngineSmoke/ExhaustEngineSmoke(Clone)</Path>
+      <Offset>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </Offset>
+    </LocoExhaust>
+  </Exhausts>
+  <ChargerKind>Turbo</ChargerKind>
+  <TurboCharger>
+    <LambdaCalibration>1.53</LambdaCalibration>
+  </TurboCharger>
+  <Smoke>
+    <CleanMaxHeatAlpha>0.1</CleanMaxHeatAlpha>
+    <OilTintStrength>0.42</OilTintStrength>
+    <OilRpmExponent>1.5</OilRpmExponent>
+  </Smoke>
+  <SmokeEmitter>
+    <startSize>0.38</startSize>
+  </SmokeEmitter>
+  <ShimmerEmitter />
+  <Velocity />
+</LocoProfile>
