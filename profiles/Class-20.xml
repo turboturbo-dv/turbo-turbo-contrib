@@ -1,0 +1,32 @@
+<LocoProfile>
+  <Version>1</Version>
+  <LiveryId>Class 20</LiveryId>
+  <Enabled>true</Enabled>
+  <Exhausts>
+    <LocoExhaust>
+      <Kind>Replacement</Kind>
+      <Path>[particles]/ExhaustEngineSmoke/ExhaustEngineSmoke(Clone)</Path>
+      <Offset>
+        <x>0</x>
+        <y>0.06</y>
+        <z>0</z>
+      </Offset>
+    </LocoExhaust>
+  </Exhausts>
+  <ChargerKind>Turbo</ChargerKind>
+  <TurboCharger>
+    <LambdaCalibration>1.52</LambdaCalibration>
+    <TauUp>2</TauUp>
+    <TauDown>1</TauDown>
+  </TurboCharger>
+  <Smoke>
+    <CleanMinHeatAlpha>0.004</CleanMinHeatAlpha>
+    <CleanMaxHeatAlpha>0.1</CleanMaxHeatAlpha>
+    <OilTintStrength>0.5</OilTintStrength>
+    <OilRpmExponent>1</OilRpmExponent>
+  </Smoke>
+  <SmokeEmitter />
+  <ShimmerEmitter />
+  <Velocity />
+  <Combustion />
+</LocoProfile>

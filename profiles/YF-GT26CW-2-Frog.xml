@@ -1,0 +1,34 @@
+<LocoProfile>
+  <Version>1</Version>
+  <LiveryId>YF_GT26CW-2_Frog</LiveryId>
+  <Enabled>true</Enabled>
+  <Exhausts>
+    <LocoExhaust>
+      <Kind>Replacement</Kind>
+      <Path>[particles]/ExhaustEngineSmoke/ExhaustEngineSmoke(Clone)</Path>
+      <Offset>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </Offset>
+    </LocoExhaust>
+  </Exhausts>
+  <ChargerKind>Turbo</ChargerKind>
+  <TurboCharger>
+    <LambdaCalibration>1.45</LambdaCalibration>
+    <TauDown>2</TauDown>
+  </TurboCharger>
+  <Smoke>
+    <Density>200</Density>
+    <OilTintStrength>0.2</OilTintStrength>
+    <OilRpmExponent>0.7</OilRpmExponent>
+  </Smoke>
+  <SmokeEmitter>
+    <startSize>0.4</startSize>
+  </SmokeEmitter>
+  <ShimmerEmitter />
+  <Velocity>
+    <Idle>4</Idle>
+    <FullLoad>20</FullLoad>
+  </Velocity>
+</LocoProfile>
