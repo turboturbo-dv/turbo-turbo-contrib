@@ -1,0 +1,8 @@
+{
+  "Id": "TurboTurboContrib",
+  "DisplayName": "TurboTurbo Community Profiles",
+  "Author": "geluk",
+  "Version": "##VERSION##",
+  "HomePage":"https://github.com/turboturbo-dv/turbo-turbo-contrib",
+  "Repository":"https://raw.githubusercontent.com/turboturbo-dv/turbo-turbo-contrib/refs/heads/main/repository.json"
+}
