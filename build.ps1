@@ -8,6 +8,42 @@ param(
 $ErrorActionPreference = 'Stop'
 $root = $PSScriptRoot
 
+# Compress-Archive emits OS path separators depending on the PowerShell version,
+# so use the .NET API and force forward slashes
+function New-ModZip {
+    param(
+        [Parameter(Mandatory)][string]$SourceDirectory,
+        [Parameter(Mandatory)][string]$DestinationPath
+    )
+
+    Add-Type -AssemblyName System.IO.Compression -ErrorAction SilentlyContinue
+    if (-not ('System.IO.Compression.ZipFile' -as [type])) {
+        Add-Type -AssemblyName System.IO.Compression.FileSystem
+    }
+
+    $source = (Resolve-Path -LiteralPath $SourceDirectory).Path
+    $rootName = Split-Path -Leaf $source
+
+    if (Test-Path -LiteralPath $DestinationPath) { Remove-Item -LiteralPath $DestinationPath -Force }
+
+    $archive = [System.IO.Compression.ZipFile]::Open($DestinationPath, [System.IO.Compression.ZipArchiveMode]::Create)
+    try {
+        foreach ($file in (Get-ChildItem -LiteralPath $source -Recurse -File)) {
+            $relative = $file.FullName.Substring($source.Length + 1).Replace('\', '/')
+            $entry = $archive.CreateEntry("$rootName/$relative", [System.IO.Compression.CompressionLevel]::Optimal)
+            $entryStream = $entry.Open()
+            try {
+                $input = [System.IO.File]::OpenRead($file.FullName)
+                try { $input.CopyTo($entryStream) } finally { $input.Dispose() }
+            } finally {
+                $entryStream.Dispose()
+            }
+        }
+    } finally {
+        $archive.Dispose()
+    }
+}
+
 # Reads each <LocoProfile> fragment in $Files and writes a single TurboConfig.xml
 # to $Destination, failing on malformed fragments or duplicate livery ids.
 function New-TurboConfig {
@@ -89,7 +125,7 @@ $version = & "$root\scripts\StampModVersion.ps1" -InfoJson $stagedInfo
 
 $zip = "$root\dist\TurboTurboContrib-$version.zip"
 if (Test-Path -LiteralPath $zip) { Remove-Item -LiteralPath $zip -Force }
-Compress-Archive -Path $stage -DestinationPath $zip
+New-ModZip -SourceDirectory $stage -DestinationPath $zip
 Remove-Item "$root\dist\stage" -Recurse -Force
 
 Write-Host "packaged: $zip"
