@@ -1,6 +1,6 @@
 <LocoProfile>
   <Version>1</Version>
-  <LiveryId>BLW DRS 1500hp</LiveryId>
+  <LiveryId>DRS-1500</LiveryId>
   <Enabled>true</Enabled>
   <Exhausts>
     <LocoExhaust>
