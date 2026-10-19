@@ -1,5 +1,5 @@
 <LocoProfile>
-  <Version>1</Version>
+  <Version>2</Version>
   <LiveryId>YF_GT26CW-2_Bulb_Cut</LiveryId>
   <Enabled>true</Enabled>
   <Exhausts>
@@ -28,7 +28,6 @@
   </SmokeEmitter>
   <ShimmerEmitter />
   <Velocity>
-    <Idle>4</Idle>
-    <FullLoad>20</FullLoad>
+    <ExhaustVelocityCoefficient>6.5</ExhaustVelocityCoefficient>
   </Velocity>
 </LocoProfile>
