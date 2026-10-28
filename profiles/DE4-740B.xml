@@ -1,0 +1,39 @@
+<!-- EMC E-series (B-unit) -->
+<LocoProfile>
+<Version>2</Version>
+<LiveryId>DE4-740B</LiveryId>
+<Enabled>true</Enabled>
+<Exhausts>
+<LocoExhaust>
+    <Kind>Replacement</Kind>
+    <Path>[particles]/ExhaustEngineSmoke/ExhaustEngineSmoke(Clone)</Path>
+    <Offset>
+    <x>0</x>
+    <y>0.1</y>
+    <z>0</z>
+    </Offset>
+</LocoExhaust>
+<LocoExhaust>
+    <Kind>Replacement</Kind>
+    <Path>[particles]/ExhaustEngineSmoke (1)/ExhaustEngineSmoke(Clone)</Path>
+    <Offset>
+    <x>0</x>
+    <y>0.1</y>
+    <z>0</z>
+    </Offset>
+</LocoExhaust>
+</Exhausts>
+<ChargerKind>Roots</ChargerKind>
+<Roots />
+<Smoke />
+<SmokeEmitter>
+<startSize>0.35</startSize>
+</SmokeEmitter>
+<ShimmerEmitter>
+<startSize>0.7</startSize>
+<strength>0.01</strength>
+</ShimmerEmitter>
+<Velocity />
+<Combustion />
+<Stack />
+</LocoProfile>
