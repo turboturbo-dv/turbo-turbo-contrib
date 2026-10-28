@@ -1,0 +1,33 @@
+<!-- Class DCB -->
+<LocoProfile>
+<Version>2</Version>
+<LiveryId>DE4/6-850</LiveryId>
+<Enabled>true</Enabled>
+<Exhausts>
+<LocoExhaust>
+    <Kind>Replacement</Kind>
+    <Path>[particles]/ExhaustEngineSmoke/ExhaustEngineSmoke(Clone)</Path>
+    <Offset>
+    <x>0</x>
+    <y>0.06</y>
+    <z>0</z>
+    </Offset>
+</LocoExhaust>
+</Exhausts>
+<ChargerKind>Roots</ChargerKind>
+<Roots>
+<LambdaCalibration>0.93</LambdaCalibration>
+</Roots>
+<Smoke>
+<OilRpmExponent>1.4</OilRpmExponent>
+</Smoke>
+<SmokeEmitter>
+<startSize>0.36</startSize>
+</SmokeEmitter>
+<ShimmerEmitter>
+<startSize>0.6</startSize>
+</ShimmerEmitter>
+<Velocity />
+<Combustion />
+<Stack />
+</LocoProfile>
