@@ -1,0 +1,45 @@
+<!-- GE 50-ton -->
+<LocoProfile>
+  <Version>2</Version>
+  <LiveryId>DM2-540</LiveryId>
+  <Enabled>true</Enabled>
+  <Exhausts>
+    <LocoExhaust>
+      <Kind>Replacement</Kind>
+      <Path>[particles]/ExhaustEngineSmoke/ExhaustEngineSmoke(Clone)</Path>
+      <Offset>
+        <x>0.028</x>
+        <y>0.03</y>
+        <z>-0.008</z>
+      </Offset>
+    </LocoExhaust>
+  </Exhausts>
+  <ChargerKind>Atmospheric</ChargerKind>
+  <Atmospheric>
+    <EtaPeak>0.85</EtaPeak>
+    <ChokeK>0.3</ChokeK>
+    <LambdaCalibration>0.51</LambdaCalibration>
+    <CompressionRatio>15.5</CompressionRatio>
+  </Atmospheric>
+  <Smoke>
+    <Density>50</Density>
+    <WetStackMaxAlpha>0.2</WetStackMaxAlpha>
+    <OilTintStrength>0.4</OilTintStrength>
+    <OilRpmExponent>1</OilRpmExponent>
+  </Smoke>
+  <SmokeEmitter>
+    <startSize>0.1</startSize>
+    <plumeSize>5.5</plumeSize>
+    <growthExponent>0.75</growthExponent>
+  </SmokeEmitter>
+  <ShimmerEmitter>
+    <startSize>0.2</startSize>
+    <sizeOverLifetimeEnd>4.2</sizeOverLifetimeEnd>
+    <strength>0.007</strength>
+  </ShimmerEmitter>
+  <Velocity>
+    <ExhaustVelocityCoefficient>4.3</ExhaustVelocityCoefficient>
+  </Velocity>
+  <Combustion />
+  <Stack />
+</LocoProfile>
