@@ -2,6 +2,11 @@
   "Releases": [
     {
       "Id": "TurboTurboContrib",
+      "Version": "4.0.0",
+      "DownloadUrl": "https://github.com/turboturbo-dv/turbo-turbo-contrib/releases/download/v4.0.0/TurboTurboContrib-4.0.0.zip"
+    },
+    {
+      "Id": "TurboTurboContrib",
       "Version": "3.0.0",
       "DownloadUrl": "https://github.com/turboturbo-dv/turbo-turbo-contrib/releases/download/v3.0.0/TurboTurboContrib-3.0.0.zip"
     },
